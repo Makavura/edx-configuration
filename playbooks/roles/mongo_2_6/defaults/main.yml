@@ -1,20 +1,20 @@
 mongo_logappend: true
-mongo_version: 2.6.5
+mongo_version: 3.6.3
 mongo_port: "27017"
 mongo_extra_conf: ''
 mongo_key_file: '/etc/mongodb_key'
 mongo_repl_set: rs0
 mongo_cluster_members: []
-pymongo_version: 2.7.2
+pymongo_version: 3.9.0
 
 mongo_data_dir: "{{ COMMON_DATA_DIR }}/mongo"
 mongo_log_dir: "{{ COMMON_LOG_DIR }}/mongo"
 mongo_journal_dir: "{{ COMMON_DATA_DIR }}/mongo/mongodb/journal"
 mongo_user: mongodb
 
-MONGODB_APT_KEY: "7F0CEB10"
+MONGODB_REPO: "deb https://repo.mongodb.org/apt/ubuntu xenial/mongodb-org/3.6 multiverse" 
+MONGODB_APT_KEY: "2930ADAE8CAF5059EE73BB4B58712A2291FA4AD5"
 MONGODB_APT_KEYSERVER: "keyserver.ubuntu.com"
-MONGODB_REPO: "deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen"
 
 # Vars Meant to be overridden
 MONGO_ADMIN_USER: 'admin'
